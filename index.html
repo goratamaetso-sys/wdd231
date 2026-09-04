@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD231 |Gorata Maetso</title>
+    <meta name="author" content="Gorata Maetso">
+    <meta name="description" content="This is a Gorata Maetso's homepage for WDD 231">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Lato:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/base.js" defer></script>
 </head>
 <body>
+    <header>
+        <img src="images/home.svg" alt="Site Logo" width="512" height="512">
+        <span>Gorata's Homepage</span>
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu" ></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+    <main>
+         <h1>Home</h1>
+
+        <div class="about-me">
+            <section class="card-about">
+
+                <h2>About Me</h2>
+                <p>
+                    Hello! My name is Gorata Maetso.I love reading and learning new things,
+                     so my favourite place to be is between the pages of an interesting book.
+                     My ideal career is to become a software developer which is why 
+                      I am currently studyingSoftware Development at BYU Idaho. I enjoy learning HTML,
+                     CSS, JavaScript and Python while building web applications.
+                    Thus far I have found this course to be both challenging and enjoyable.
+                     I am looking forward to learning more about web development and programming in the future.
+                     This career path is ideal for me
+                     because I enjoy continuous learning and as technology evolves, there is always something new to discover.
+                </p>      
+            </section>  
+
+            <section class="photo-card">  
+                <h2>Student Photo</h2>
+                <img src="images/profile-gorata.webp"
+                        alt="Gorata's Profile Picture" width="250" height="500">
+            </section>
+        </div> 
+
+        <section class="course-cards">
+            <h2>Web Certificate Courses</h2>
+            <div class="buttons">
+                <button id="allBtn">All</button>
+                <button id="cseBtn">CSE</button>
+                <button id="wddBtn">WDD</button>
+            </div>
+            <div id="course-container" class="course-list"></div>
+            <p id="creditTotal"></p>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://linkedin.com/in/goratamaetso" target="_blank"><img src="images/linkedin-icon.svg" alt="Linkedin icon" width="16" height="16"></a>
+            <a href="https://github.com/goratamaetso-sys" target="_blank"><img src="images/github.svg" alt="Github icon" width="16" height="16"></a>
+            <a href="https://instagram.com/dr_rata_rams" target="_blank"><img src="images/instagram-icon.svg" alt="Instagram icon" width="16" height="16"></a>
+        </div> 
+        <p>&copy;<span id="currentyear"></span> Gorata Maetso| South Africa</p>   
+        <p id="lastModified"></p>   
+
+    </footer>
     
 </body>
 </html>
