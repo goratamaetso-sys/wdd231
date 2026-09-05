@@ -24,6 +24,7 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 1rem;
+        padding: 20px;
     }
     .course-cards {
     margin-top: 1rem;

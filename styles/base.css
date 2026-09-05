@@ -121,11 +121,11 @@ h2 {
 }
 
 /*about section*/
-.about-me{
+.about-me {
     display: block;
     background: none;
     border: none;
-    padding: 0;
+    padding: 20px;
 }
 
 .card-about , 
@@ -134,11 +134,12 @@ h2 {
     background-color: var(--surface);
     border: 1px solid #ddd;
     margin-bottom: 1rem;
+    padding: 20px;
 }
 
 .photo-card img {
     display: block;
-    width: 500px;
+    width: 100%;
     height: auto;
 }
 
