@@ -1,0 +1,51 @@
+body {
+	font-family: Lato, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+	text-align: center;
+    color: #1d057f;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 20px;
+}
+
+#cards section {
+    background-color: #ccc;
+    border: 1px solid #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+h2 {
+	margin: 1rem 0;
+    font-family: 'Caveat', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #465ee5e4;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background-color: #1d057f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,23 @@
+{
+    "family name": "Mestro",
+    "move_in_date": "2023-01-01",
+    "number_of_members": 3,
+    "visited_by_bishopric": true,
+    "family_members": [
+        {
+            "name": "Atarog Mestro",
+            "gender": "Male",
+            "birthdate": "1990-09-08"
+        },
+        {
+            "name": "Olerato Mestro",
+            "gender": "Female",
+            "birthdate": "1995-08-10"
+        },
+        {
+            "name": "Tebogo Mestro",
+            "gender": "Male",
+            "birthdate": "2020-05-01"
+        }
+    ]
+}
