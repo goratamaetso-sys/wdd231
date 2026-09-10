@@ -1,0 +1,58 @@
+[
+  {
+    "image": "glorious_ctech.webp",
+    "companyName": "Glorious C Tech Pty Ltd",
+    "companyAddress": "Shop No. 007, Flora Centre, Florida, Roodepoort",
+    "phone": "(011) 123-4567",
+    "website": "https://gloriousctech.co.za",
+    "membership": "Member"
+  },
+  {
+    "image": "urgentgo_courier.webp",
+    "companyName": "UrgentGo Courier",
+    "companyAddress": "Flora Centre, Conrad Drive & Ontdekkers Rd, Florida, Roodepoort",
+    "phone": "(011) 234-5678",
+    "website": "https://urgentgo.co.za",
+    "membership": "Silver"
+  },
+  {
+    "image": "pace_car_rental.webp",
+    "companyName": "Pace Car Rental - Roodepoort",
+    "companyAddress": "399 Ontdekkers Road, Florida, Roodepoort",
+    "phone": "(011) 262-5500",
+    "website": "https://pacecarrental.co.za",
+    "membership": "Gold"
+  },
+  {
+    "image": "belinda_transcription.webp",
+    "companyName": "Belinda's Transcription Services",
+    "companyAddress": "83 Louis Botha Drive, Florida Hills, Roodepoort, 1709",
+    "phone": "+27 72 663 8568",
+    "website": "https://transcriptionservices.co.za",
+    "membership":"Member"
+  },
+  {
+    "image": "nk_trading.webp",
+    "companyName": "NK Trading Pty Ltd",
+    "companyAddress": "Office No. 4, Florida Junction, 116 Christiaan de Wet Rd, Florida Park, Roodepoort, 1724",
+    "phone": "011 760 1330",
+    "website": "https://nkgadgets.co.za",
+    "membership":"Silver"
+  },
+  {
+    "image": "kiaat_hospital.webp",
+    "companyName": "Dr Treven Moodley",
+    "companyAddress": "Suite 104, Netcare Constantia Day Clinic, 374 Ontdekkers Rd, Florida Park, Roodepoort, 1709",
+    "phone": "010 500 3176",
+    "website": "https://drtrevenmoodley.co.za",
+    "membership": "Gold"
+  },
+  {
+    "image": "fabulous_furniture.webp",
+    "companyName" : "Fabulous Furniture Pty Ltd",
+    "companyAddress": "373 Ontdekkers Road, Florida, Roodepoort, 2193",
+    "phone": "066 549 2593",
+    "website": "https://fabulousfurniture.co.za",
+    "membership": "Silver"
+  }
+]

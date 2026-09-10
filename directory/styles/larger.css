@@ -1,0 +1,60 @@
+@media (min-width: 800px) {
+    header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+        padding: 1.5rem 2rem;
+	}
+    
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex; 
+        flex-direction: row;
+        gap: 1.5rem;
+        width: auto;
+        padding: 0;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .nav-menu li {
+        border: none;
+        padding: 0;
+    }
+
+    .nav-menu li a {
+       padding: 0.75rem 1rem; 
+    }
+
+    #title {
+        font-size: 2.5rem;
+    }
+
+    .directory-cards{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .company-contact,
+    .author {
+        flex: 1;
+    }
+
+    .social {
+        flex: 0 0 auto;
+    }
+
+}

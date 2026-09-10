@@ -1,0 +1,277 @@
+:root{
+    --primary-color: #113c65;
+    --secondary-color: #d9dddc;
+    --accent-color: #dc0510;
+    --background: #ffffff;
+    --text: #0a0a0a;
+    --radius: 8px;
+    --small-radius: 4px;
+
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --small-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    --transition: 0.3s ease;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    box-shadow: var(--small-shadow);
+}
+
+#title {
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 1.5rem;
+    margin-left: 0;
+    color: var(--secondary-color);
+}
+
+header, 
+main {
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+nav { 
+    background-color: var(--primary-color);    
+}
+
+.hamburger {
+    position: static;
+    font-size: 24px;
+    background: none;
+    color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-menu{
+    max-height: 0;
+    overflow: auto;
+    transition: max-height 0.3s ease-out;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+.nav-menu.active {
+    max-height: 500px; 
+    transition: max-height 0.5s ease-in;
+}
+
+.nav-menu li {
+    padding: 10px;
+    border-bottom: 10px solid #ddd;
+}
+.nav-menu li a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: var(--secondary-color);
+    padding: 1rem;
+    font-size: large;    
+}
+
+.nav-menu li a:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.nav-menu li a.active {
+    background-color: var(--text);
+    color: var(--secondary-color);
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.hover:hover {
+	box-shadow: 0 0 50px #333;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    font-family: 'Advent Pro', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    padding: 10px;
+}
+
+h2 {
+    text-align: left;
+}
+
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.view-buttons button:hover,
+.view-buttons button:focus {
+    background-color: var(--accent-color);
+}
+
+.view-buttons button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--small-radius);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.directory-cards.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.directory-cards.list-view section {
+    display: block;
+    text-align: left;
+    padding: 1rem;
+}
+
+.directory-cards.list-view img {
+    display: none;
+}
+
+.directory-cards.list-view h3 {
+    margin-bottom: 0.5rem;
+}
+
+.directory-cards.list-view p {
+    margin: 0.2rem 0;
+}
+
+.directory-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.directory-cards section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border: 1px solid #333;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.directory-cards h3 {
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.directory-cards p {
+    font-size: 0.95rem;
+    color: var(--text);
+    margin: 0.3rem 0;
+}
+
+.directory-cards a {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.directory-cards a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.directory-cards img {
+    display: block;
+    border-radius: var(--small-radius);
+    margin: 0 auto 1rem;
+    width: 100%;
+    height: auto;
+    box-shadow: var(--small-shadow);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.company-contact,
+.author {
+    width: 100%;
+    text-align: center;
+}
+
+.company-contact p,
+.author p {
+    margin: 0.4rem 0;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+}
+
+.social a:hover {
+    background-color: var(--accent-color);
+    border-radius: var(--small-radius);
+}
