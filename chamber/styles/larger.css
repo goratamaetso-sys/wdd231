@@ -1,55 +1,65 @@
 @media (min-width: 800px) {
+
     header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-        padding: 1.5rem 2rem;
-	}
-    
+        padding: 1.25rem 2rem;
+    }
+
+    #title {
+        font-size: 2.2rem;
+    }
+
     .hamburger {
         display: none;
     }
 
     .nav-menu {
-        display: flex; 
-        flex-direction: row;
-        gap: 1.5rem;
+        display: block;
         width: auto;
-        padding: 0;
-        max-height: none;
-        overflow: visible;
+    }
+
+    .nav-menu ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        width: auto;
+        margin-top: 0;
     }
 
     .nav-menu li {
-        border: none;
-        padding: 0;
+        width: auto;
     }
 
     .nav-menu li a {
-       padding: 0.75rem 1rem; 
+        width: auto;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: var(--small-radius);
     }
 
-    #title {
-        font-size: 2.5rem;
+    .nav-menu li a.active {
+        border-bottom: 4px solid var(--accent-color);
     }
 
-    .directory-cards{
+    main {
+        padding: 3rem 2rem;
+    }
+
+    .directory-cards {
         grid-template-columns: repeat(3, 1fr);
-        padding: 1rem;
         gap: 1.5rem;
     }
 
     footer {
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
-        gap: 1.5rem;
-        padding: 1.5rem;
+        padding: 2rem;
+        text-align: left;
     }
 
     .company-contact,
     .author {
+        width: auto;
         flex: 1;
     }
 
@@ -57,4 +67,7 @@
         flex: 0 0 auto;
     }
 
+    .author {
+        text-align: right;
+    }
 }

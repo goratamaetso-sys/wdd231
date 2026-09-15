@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    background-color: rgb(59, 145, 160);
+}
+.card{
+    border: 1px solid #ddd;
+    background-color: rgb(179, 216, 216);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card h2{
+    color: rgb(1, 1, 28);
+    margin: .3rem 0;
+}
+
+.card figcaption{
+    text-transform: capitalize;
+    color: navy;
+    margin: .3rem 0;
+}
+
+.card #current-temp {
+    font-family: 2rem;
+    color: rgb(18, 18, 236);
+    margin: .3rem 0;
+}
+
+.card #weather-icon{
+    width: 100px;
+    height: auto;
+}
+
+footer{
+    background-color: rgb(35, 97, 108);
+    color: #fff;
+    font-size: large;
+    text-align: center;
+    padding: 10px;
+}
