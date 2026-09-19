@@ -5,25 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Florida Chamber of Commerce</title>
     <meta name="author" content="Gorata Maetso">
-    <meta name="description" content="This is a homepage page for Florida, Roodeport chamber of commerce site.">
+    <meta name="description" content="This is a homepage page for Florida, Roodeport which contains key information about our chamber of commerce site.">
     <meta property="og:title" content="WDD231 | Gorata Maetso">
     <meta property="og:description" content="Explore our homepage for Florida, Roodeport chamber of commerce site.">
-    <meta property="og:image" content="images/profile-gorata.webp">
+    <meta property="og:image" content="https://goratamaetso-sys.github.io/wdd231/chamber/images/florida.jfif">
     <meta property="og:url" content="https://goratamaetso-sys.github.io/wdd231/">
+    <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/universal.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
 </head>
 <body>
     <header>
         <span id="title">Florida Chamber of Commerce</span>
         <button id="hamburger" class="hamburger"> ☰</button>
-        <nav>
-            <ul id="nav-menu" class="nav-menu">
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
                 <li><a href="index.html"  class="active">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
@@ -32,8 +35,56 @@
         </nav>
     </header>
     <main>
-        <h1>HomePage</h1>
-        <section>content coming soon</section>
+        <div class="hero">
+             <picture>
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 750px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="Above view of Florida" width="500" height="250">
+            </picture>
+            <div class="cta">
+                <a href="join.html" class="btn">Join Us</a>
+            </div>
+        </div>
+        <h1>Welcome to our HomePage</h1>
+        <section id="events-grid" class="events-grid">
+            <h2>Current Events</h2>
+            <div class="events-cards">
+                <figure>
+                    <img src="images/business_expo.webp" alt="Business Expo Flyer">
+                    <figcaption>Business Expo</figcaption>
+                    <p class="event-desc">Support local business with arts, crafts, fashion, and live music at the business expo.</p>
+                </figure>
+                <figure>
+                    <img src="images/cleanup.webp" alt="Clean up Campaign">
+                    <figcaption>Clean Up Campaign</figcaption>
+                    <p class="event-desc">Join the community at Loran Spring Park to keep our environment clean and sustainable</p>
+                </figure>
+                <figure>
+                    <img src="images/safety.webp" alt="Community Policing Forum">
+                    <figcaption>Community Policing Forum</figcaption>
+                    <p class="event-desc">Join us as we discuss how to work together with the local police to improve safety and strengthen community trust.</p>
+                </figure>   
+            </div>
+        </section>
+        <section id="weather-card" class="weather-card">
+            <h2>Florida weather</h2>
+            <div class="today-weather">
+                <h3>Today</h3>
+                <div>
+                    <img id="weather-icon" src="" alt="">
+                    <span id="current-temp"></span>
+                    <span id="weather-desc"></span>
+                </div>
+            </div>
+            <h3>3-Day Weather Forecast</h3>
+            <div id="forecast" class="forecast-container"></div>
+            
+        </section>
+        <section id="advertisement" class="advertisement-cards">
+            <h3>Business Spotlights</h3>
+            <div id="spotlight-card"></div>
+        </section>
+        
     </main> 
     <footer>
         <div class="company-contact">

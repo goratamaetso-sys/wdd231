@@ -44,9 +44,19 @@
         padding: 3rem 2rem;
     }
 
-    .directory-cards {
+    .directory-cards,
+    .event-cards {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
+    }
+
+    #spotlight-card {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .spotlight-card {
+        max-width: none;
     }
 
     footer {
