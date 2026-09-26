@@ -6,7 +6,7 @@
     <title>Join | Florida Chamber of Commerce</title>
     <meta name="author" content="Gorata Maetso">
     <meta name="description" content="This is a community page for Florida, Roodeport chamber of commerce site.">
-    <meta property="og:title" content="WDD231 | Gorata Maetso">
+    <meta property="og:title" content="WDD231 | Web Fronted Development | Gorata">
     <meta property="og:description" content="Explore our community page for Florida, Roodeport chamber of commerce site and consider joining our community.">
     <meta property="og:image" content="https://goratamaetso-sys.github.io/wdd231/chamber/images/florida.jfif">
     <meta property="og:url" content="https://goratamaetso-sys.github.io/wdd231/">
@@ -39,17 +39,18 @@
         <section class="membership-section">
             <section class="membership-form">
                 <h2>Membership Form</h2>
-                <form method="GET" action="thanks.html">
+                <form method="GET" action="thankyou.html">
                 <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
                 <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-                <label>Organizational Title <input type="text" name="title" required autocomplete="organization-title" title="Your Organization title" pattern="[A-Za-z\- ]{7,}"></label>
-                <label>Phone Number<input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
-                <label>Email Address></Address> <input type="email" name="email" required placeholder="janesmith90@gmail.com"  title="Your Email" autocomplete="email"></label>
+                <label>Organizational Title <input type="text" name="title" required autocomplete="organization-title" title="Your Organization title" pattern="[A-Za-z -]{7,}"></label>
+                <label>Phone Number<input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+                <label>Email <input type="email" name="email" required placeholder="janesmith90@gmail.com"  title="Your Email" autocomplete="email"></label>
                 <label>Business Name <input type="text" name="business" required autocomplete="organization" title="Your Organization's Name"></label>
                 
                 <label>
                     Membership Level:
                     <select name="membership-level" title="Membership Level" required>
+                        <option value="" disabled selected>Select a Membership Level</option>
                         <option value="np">NP Membership (Non-profit, no fee)</option>
                         <option value="bronze">Bronze Membership</option>
                         <option value="silver">Silver Membership</option>

@@ -475,7 +475,7 @@ h3 {
     border-radius: var(--radius);
 }
 
-.spotlight-card img
+.spotlight-card img,
 .directory-card img {
     display: block;
     width: min(100%, 200px);
@@ -600,11 +600,8 @@ h3 {
 
 .membership-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1rem;
-    width: 100%;
-    height: auto;
-    padding: 0;
 }
 
 .membership-card {
@@ -614,39 +611,86 @@ h3 {
     border-radius: var(--small-radius);
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    
+    animation: cardAnimation 0.8s ease;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes cardAnimation {
+    from {
+        opacity: 0;
+        transform: rotate(10deg) translateX(20px) scale(1.2);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0) translateX(0) scale(1);
+    }
 }
 
 .membership-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
 }
+
 
 .membership-card h3 {
     margin: 0;
     padding: 0.8rem;
-    background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--text);
     font-size: 1.1rem;
+    text-align: center;
+}
+
+.membership-card p {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.membership-card button {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.6rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: var(--small-radius);
+    cursor: pointer;
+}
+
+.membership-card button:hover {
+    background-color: var(--accent-color);
+    font-weight: bold;
 }
 
 #results {
-    background-color: var(--secondary-color);
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 6px;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
     align-items: center;
-  }
+}
+
+#results p {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    background-color: var(--white);
+    border-radius: var(--small-radius);
+}
 
 dialog.modal {
-    background: var(--background);
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: min(90%, 500px);
+    padding: 2rem;
+    background-color: var(--background);
+    border: 1px solid rgb(0 0 0 / 0.5);
     border-radius: 10px;
-    border: 1px solid rgb(0 0 0 /0.5);
-    padding: 20px;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-    align-items: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 dialog.modal::backdrop {
@@ -655,12 +699,12 @@ dialog.modal::backdrop {
 
 #closeModal{
     position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px;
+    top: 15px;
+    right: 15px;
+    padding: 6px 10px;
     background: transparent;
-    font-size: 1.5rem;
-    border: 1px solid rgb(0 0 0 /0.1);
+    font-size: 1rem;
+    border: none;
     cursor: pointer;
 }
 
@@ -668,7 +712,12 @@ dialog.modal h3,
 dialog.modal h4{
     margin-top: 0;
     color: var(--text);
-    background-color: rgb(0 0 0 /0.3);
+    text-align: center;
+}
+
+dialog.modal button{
+    background: var(--background);
+    color: var(--primary-color);
 }
 
 
@@ -786,6 +835,10 @@ footer {
     .membership-form h2,
     .membership-container h2 {
         font-size: 1.3rem;
+    }
+
+    .membership-form select {
+        font-size: 0.8rem;
     }
 
     .membership-form input[type="submit"] {

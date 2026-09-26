@@ -1,5 +1,8 @@
 // Timestamp on the form
-document.getElementById("timestamp").value = new Date().toISOString();
+const timestamp = document.getElementById("timestamp");
+if (timestamp){
+    timestamp.value = new Date().toISOString();
+}
 
 
 // Membership level data
@@ -48,28 +51,30 @@ const memberships = [
 // Populate membership cards dynamically
 const container = document.getElementById("membership-cards");
 
-memberships.forEach(member => {
-    const card = document.createElement("div");
-    card.classList.add("member");
+if (container) {
+    memberships.forEach(member => {
+        const card = document.createElement("div");
+        card.classList.add("membership-card");
 
-    card.innerHTML = `
-        <h3>${member.level} Membership</h3>
-        <button type="button">View Details</button>
-    `;
+        card.innerHTML = `
+            <h3>${member.level} Membership</h3>
+            <button type="button">View Details</button>
+        `;
 
-    // Add click event to the button
-    card.querySelector("button").addEventListener("click", () => {
-        displayMembershipDetail(member);
+        card.querySelector("button").addEventListener("click", () => {
+            displayMembershipDetail(member);
+        });
+
+        container.appendChild(card);
     });
-
-    container.appendChild(card);
-});
-
+}
 
 // Modal
 const membershipDetails = document.getElementById("membership-details");
 
 function displayMembershipDetail(member) {
+    if (!membershipDetails) return;
+
     membershipDetails.innerHTML = `
         <h4>${member.level} Membership</h4>
 
@@ -81,31 +86,35 @@ function displayMembershipDetail(member) {
             <strong>Cost:</strong> ${member.cost}
         </p>
 
-        <button 
-            id="closeModal" 
+        <button
+            id="closeModal"
             type="button"
             aria-label="Close membership details">
             ❌
         </button>
     `;
 
-    // Show modal
     membershipDetails.showModal();
 
-    // Close modal
-    const closeModal = document.getElementById("closeModal");
-
-    closeModal.addEventListener("click", () => {
+    document.getElementById("closeModal").addEventListener("click", () => {
         membershipDetails.close();
     });
 }
 
 //confirmation page
-const myInfo = new URLSearchParams(window.location.search);
+document.addEventListener("DOMContentLoaded", () => {
+  const myInfo = new URLSearchParams(window.location.search);
 
-document.querySelector('#results').innerHTML = `
-<p>Membership for: ${myInfo.get('first')} ${myInfo.get('last')}</p>
-<p>A ${myInfo.get('title')} at ${myInfo.get('business')}</p>
-<p>Your Phone: ${myInfo.get('phone')}</p>
-<p>Your Email is: ${myInfo.get('email')}</p>
-`
+  const results = document.querySelector("#results");
+  if (results) {
+    results.innerHTML = `
+      <p><strong>Membership for:</strong> ${myInfo.get("first")} ${myInfo.get("last")}</p>
+      <p><strong>Organizational Title:</strong> ${myInfo.get("title")}</p>
+      <p><strong>Business:</strong> ${myInfo.get("business")}</p>
+      <p><strong>Your Phone:</strong> ${myInfo.get("phone")}</p>
+      <p><strong>Your Email:</strong> ${myInfo.get("email")}</p>
+      <p><strong>Application Date:</strong> ${new Date(myInfo.get("timestamp")).toLocaleString()}</p>
+    `;
+  }
+});
+
