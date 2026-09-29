@@ -171,14 +171,10 @@ li {
 ========================= */
 
 .wireframe {
-    grid-column: 1 / -1;
-
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     gap: 2rem;
     flex-wrap: wrap;
-
     border-left-color: var(--accent-color);
 }
 
@@ -191,16 +187,13 @@ li {
     display: block;
     max-width: 100%;
     height: auto;
-
     border: 3px solid var(--primary-color);
     border-radius: var(--border-radius);
-
     box-shadow: var(--shadow);
 }
 
 .wireframe figcaption {
     margin-top: 0.7rem;
-
     color: var(--primary-color);
     font-weight: 700;
 }
@@ -213,12 +206,9 @@ li {
 footer {
     margin-top: 3rem;
     padding: 1.5rem;
-
     text-align: center;
-
     background-color: var(--primary-color);
     color: var(--light-text);
-
     border-top: 5px solid var(--accent-color);
 }
 
