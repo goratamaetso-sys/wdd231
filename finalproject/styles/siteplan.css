@@ -52,7 +52,6 @@ header {
     place-items: center;
     width: 65px;
     height: 65px;
-    background-color: var(--accent-color);
     border-radius: 50%;
     font-size: 2rem;
 }
