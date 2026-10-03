@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover | Florida Chamber of Commerce</title>
     <meta name="author" content="Gorata Maetso">
-    <meta name="description" content="This is a discovery page for Florida, Roodeport chamber of commerce site.">
-    <meta property="og:title" content="WDD231 | Gorata Maetso">
+    <meta name="description" content="This is a discovery page for Florida, Roodeport chamber of commerce site where you can explore activities and thing to do.">
+    <meta property="og:title" content="WDD231 | Web Fronted Development | Gorata">
     <meta property="og:description" content="Explore our discovery page for Florida, Roodeport chamber of commerce site.">
-    <meta property="og:image" content="images/profile-gorata.webp">
+    <meta property="og:image" content="https://goratamaetso-sys.github.io/wdd231/chamber/images/florida.jfif">
     <meta property="og:url" content="https://goratamaetso-sys.github.io/wdd231/">
+    <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/universal.js" defer></script>
+    <script type="module" src="scripts/discover.js"></script>
+
+
 </head>
 <body>
     <header>
         <span id="title">Florida Chamber of Commerce</span>
         <button id="hamburger" class="hamburger"> ☰</button>
-        <nav>
-            <ul id="nav-menu" class="nav-menu">
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html" class="active">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
@@ -32,8 +37,10 @@
         </nav>
     </header>
     <main>
-        <h1>About Us</h1>
-        <section>Under Construction</section>
+        <h1>Explore Florida</h1>
+        <div class="discover-cards" id="discover-cards"></div>
+        <div id="visit-message" class="message-area"></div>
+        
     </main> 
     <footer>
         <div class="company-contact">

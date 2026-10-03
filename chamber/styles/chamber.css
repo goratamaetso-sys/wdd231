@@ -658,7 +658,8 @@ h3 {
     cursor: pointer;
 }
 
-.membership-card button:hover {
+.membership-card button:hover ,
+.card button:hover {
     background-color: var(--accent-color);
     font-weight: bold;
 }
@@ -720,7 +721,68 @@ dialog.modal button{
     color: var(--primary-color);
 }
 
+/****** Discovery Page ******/
 
+.discover-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    display: grid;
+    grid-template-areas:
+    "name"
+    "photograph"
+    "description"
+    "location"
+    "button";
+
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    border: 1px solid #aaa;
+    border-radius: var(--radius);
+    box-shadow: var(--small-shadow);   
+}
+
+.card h2 {
+    grid-area: name;
+}
+
+.card figure {
+    grid-area: photograph;
+    margin: 0 auto;
+}
+
+.card figure img{
+    width: 300px;
+    display: block;
+    overflow: hidden;
+}
+
+.card p {
+    grid-area: description;
+}
+
+.card address {
+    grid-area: location;  
+}
+
+.card button {
+    grid-area: button;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.message-area {
+    font-style: italic;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+}
 /******Footer for all pages******/
 footer {
     display: flex;
@@ -772,7 +834,7 @@ footer {
 
 /******mobile phones******/
 
-@media (max-width: 599px) {
+@media (max-width: 640px) {
 
     main {
         width: min(100% - 1.5rem, 1200px);
@@ -845,64 +907,20 @@ footer {
         font-size: 1rem;
     }
 
-    footer {
-        padding: 1.5rem 1rem;
-    }
-}
-
-/********tablets*********/
-@media (min-width: 600px) and (max-width: 899px) {
-
-    header {
-        flex-wrap: wrap;
+    .discover-cards {
+        grid-template-columns: 1fr;
     }
 
-    .nav-menu {
-        flex-basis: 100%;
-    }
-
-    #title {
-        font-size: clamp(1.3rem, 4vw, 2rem);
-    }
-
-    main {
-        width: min(100% - 2rem, 1100px);
-    }
-
-     .directory-cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .events-cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    #spotlight-card {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    #forecast {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .spotlight-card {
-        width: 100%;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: column;
+    .card figure img{
+        justify-content: center;
         align-items: center;
-        gap: 1rem;
-        padding: 1.5rem 1rem;
-        text-align: center;
     }
 
-    .company-contact,
-    .author {
-        width: 100%;
-        text-align: center;
+    footer {
+        padding: 1.5rem 1rem;
     }
 }
+
+
 
 

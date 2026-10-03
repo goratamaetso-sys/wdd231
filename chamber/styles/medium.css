@@ -1,0 +1,77 @@
+/********tablets*********/
+@media (min-width: 641px) and (max-width: 1024px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        flex-basis: 100%;
+    }
+
+    #title {
+        font-size: clamp(1.3rem, 4vw, 2rem);
+    }
+
+    main {
+        width: min(100% - 2rem, 1100px);
+    }
+
+    .directory-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .events-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #spotlight-card {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #forecast {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .spotlight-card {
+        width: 100%;
+    }
+
+    .discover-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "photograph name"
+            "photograph description"
+            "photograph location"
+            "button button";
+    }
+
+    .card figure img {
+        width: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .card figure img:hover{
+        transform: scale(1.05);
+    }    
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .company-contact,
+    .author {
+        width: 100%;
+        text-align: center;
+    }
+}
