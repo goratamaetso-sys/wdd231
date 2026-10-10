@@ -1,0 +1,694 @@
+/*universal*/
+:root {
+    --primary-color: #183B56;
+    --secondary-color: #6B8E6E;
+    --accent-color: #D4A72C;
+    --background-color: #fdfaf1;
+    --card-color: #FFFFFF;
+    --text-color: #2E2925;
+    --light-text: #FFFFFF;
+
+    --small-radius: 4px;
+    --border-radius: 10px;
+
+    --small-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow: 0 4px 12px rgba(46, 41, 37, 0.12);
+
+    --transition: 0.3s ease;
+}
+
+/*general*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Merriweather Sans", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/*header*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    box-shadow: var(--small-shadow);
+}
+
+header img {
+    background-color: var(--background-color);
+}
+
+#title {
+    font-family: "Display fair", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+/**navigation**/
+
+.hamburger {
+    display: block;
+    padding: 0.5rem;
+    border: none;
+    background: transparent;
+    color: var(--light-text);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: none;
+    width: 100%;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.nav-menu li {
+    width: 100%;
+}
+
+.nav-menu li a {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.nav-menu li a.active {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-bottom: 4px solid var(--accent-color);
+}
+
+/**headings**/
+h1,
+h2,
+h3 {
+    font-family: "Lora", sans-serif;
+    color: var(--text-color);
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 0 1.5rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+/*main*/
+main {
+    width: min(100% - 2rem, 1200px);
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
+}
+
+main > section {
+    width: 100%;
+    margin: 0 auto 2rem;
+}
+
+/*hero section*/
+.hero{
+    position: relative;
+    width: 100%;
+}
+
+.hero picture {
+    display: block;
+    width: 100%;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.cta {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.btn {
+    display: inline-block;
+    background-color: rgba(17, 60, 101, 0.85);
+    color: var(--light-text);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--small-radius);
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/**********
+   homepage styling*/
+.tagline{
+    font-style: italic;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+.about-us {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card-color);
+    border-radius: var(--radius);
+    box-shadow: var(--small-shadow);
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.about-us p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+/****** Discover Grid Section ******/
+.discover h2{
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.discover-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+    padding: 0 1rem;
+}
+
+.card {
+    background-color: var(--card-color);
+    border: 1px solid #ddd;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--small-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.card h3 {
+    margin-bottom: 0.8rem;
+    color: var(--secondary-color);
+    font-weight: bolder;
+    background: #000000;
+}
+
+.card p {
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/*discover page*/
+.filters {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.filters button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.filters button:hover {
+  background: #eee;
+  opacity: 1;
+}
+
+.filters button.active {
+  background: var(--accent-color);
+  color: #fff;
+  opacity: 1;
+}
+
+.book-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+    padding: 0 1rem;    
+}
+.book-card {
+  display: grid;
+  grid-template-columns: 180px 1fr; 
+  gap: 1rem;
+  align-items: start;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.book-card figure {
+  margin: 0;
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.book-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.book-card p {
+  margin: 0.25rem 0;
+}
+
+/******join page styles******/
+.membership-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+.membership-form,
+.membership-container {
+    flex-direction: column;
+}
+
+.membership-form {
+    background: var(--primary-color);
+    border-radius: var(--small-radius);
+    padding: 2rem;
+    box-shadow: var(--small-shadow);
+}
+
+.membership-form h2,
+.membership-container h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: var(--small-radius);
+    text-align: center;
+}
+  
+.membership-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: var(--light-text);
+    font-weight: 600;
+}
+  
+.membership-form input[type="text"],
+.membership-form input[type=tel],
+.membership-form input[type=date],
+.membership-form input[type=email],
+.membership-form select,
+.membership-form textarea {
+    display: block;
+    margin-top: 0.4rem ;
+    padding: .75rem;
+    border: 1px solid #999;
+    border-radius: var(--small-radius);
+    border-left: 5px solid #555;
+    font-size: 1rem;
+    color: var(--primary-color);
+    width: 100%;
+}
+
+.membership-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+  
+.membership-form input:required,
+.membership-form input:focus {
+    border-left-color: var(--secondary-color);
+}
+
+
+.membership-form input:required:valid,
+.membership-form input:required:valid {
+    border-left-color: var(--primary-color);
+}
+
+.membership-form input:focus,
+.membership-form select:focus,
+.membership-form textarea:focus {
+    outline: 3px solid rgba(17, 60, 101, 0.25);
+    border-color: var(--primary-color);
+    border-left-color: var(--primary-color);
+}
+
+.membership-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    border-radius: var(--small-radius);
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.membership-form input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.benefit-section {
+    background: var(--background-color);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.benefit-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.benefit-card {
+    display: block;
+    background-color: var(--card-color);
+    border: 1px solid #ddd;
+    border-radius: var(--small-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    
+    animation: cardAnimation 0.8s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes cardAnimation {
+    from {
+        opacity: 0;
+        transform: rotate(10deg) translateX(20px) scale(1.2);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0) translateX(0) scale(1);
+    }
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.benefit-card h3 {
+    margin: 0;
+    padding: 0.8rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.benefit-card p {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.benefit-card button {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.6rem 1rem;
+    background-color: var(--text-color);
+    color: var(--light-text);
+    border: none;
+    border-radius: var(--small-radius);
+    cursor: pointer;
+}
+
+.benefit-card button:hover ,
+.card button:hover {
+    background-color: var(--accent-color);
+    font-weight: bold;
+}
+
+#results {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    align-items: center;
+}
+
+#results p {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    background-color: var(--card-color);
+    border-radius: var(--small-radius);
+}
+
+dialog.modal {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: min(90%, 500px);
+    padding: 2rem;
+    background-color: var(--card-color);
+    border: 1px solid rgb(0 0 0 / 0.5);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+dialog.modal::backdrop {
+    background-color: rgb(0 0 0 /0.5);
+}
+
+#closeModal{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 10px;
+    background: transparent;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+dialog.modal h3 {
+    margin-top: 0;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+dialog.modal button{
+    background: var(--background);
+    color: var(--primary-color);
+}
+
+/******Footer for all pages******/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-align: center;
+}
+
+.company-contact,
+.author {
+    width: 100%;
+}
+
+.company-contact p,
+.author p {
+    margin: 0.3rem 0;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--small-radius);
+}
+
+.social img {
+    width: 32px;
+    height: 32px;
+}
+
+.social a:hover,
+.social a:focus {
+    background-color: var(--accent-color);
+}
+
+@media (max-width: 640px) {
+
+    main {
+        width: min(100% - 1.5rem, 1200px);
+        padding: 1.5rem 0 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+        .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filters button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .book-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .book-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .book-card img {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto 1rem;
+    }
+
+    .book-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .book-card p {
+        font-size: 0.95rem;
+    }
+
+    .membership-section {
+        display: block;
+        margin: 1rem auto;
+        padding: 0.75rem;
+    }
+
+    .membership-form,
+    .membership-container {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+    }
+
+    .benefit-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .membership-form h2,
+    .benefit-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .membership-form select {
+        font-size: 0.8rem;
+    }
+
+    .membership-form input[type="submit"] {
+        font-size: 1rem;
+    }
+}    

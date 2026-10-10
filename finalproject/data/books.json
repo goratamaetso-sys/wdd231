@@ -1,0 +1,125 @@
+[
+  {
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "category": "Knowledge",
+    "image": "sapiens.webp"
+  },
+  {
+    "title": "A Short History of Nearly Everything",
+    "author": "Bill Bryson",
+    "category": "Knowledge",
+    "image": "short-history.webp"
+  },
+  {
+    "title": "The Immortal Life of Henrietta Lacks",
+    "author": "Rebecca Skloot",
+    "category": "Knowledge",
+    "image": "immortal-life.webp"
+  },
+  {
+    "title": "Factfulness",
+    "author": "Hans Rosling",
+    "category": "Knowledge",
+    "image": "factfulness.webp"
+  },
+  {
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "category": "Knowledge",
+    "image": "thinking-fast-slow.webp"
+  },
+
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "category": "Personal Growth",
+    "image": "atomic-habits.webp"
+  },
+  {
+    "title": "The 7 Habits of Highly Effective People",
+    "author": "Stephen R. Covey",
+    "category": "Personal Growth",
+    "image": "habits.webp"
+  },
+  {
+    "title": "The Power of Now",
+    "author": "Eckhart Tolle",
+    "category": "Personal Growth",
+    "image": "power.webp"
+  },
+  {
+    "title": "Mindset",
+    "author": "Carol S. Dweck",
+    "category": "Personal Growth",
+    "image": "mindset.webp"
+  },
+  {
+    "title": "The Mountain Is You",
+    "author": "Brianna Wiest",
+    "category": "Personal Growth",
+    "image": "mountain.webp"
+  },
+
+  {
+    "title": "The 4-Hour Workweek",
+    "author": "Timothy Ferriss",
+    "category": "Career Success",
+    "image": "workweek.webp"
+  },
+  {
+    "title": "Good to Great",
+    "author": "Jim Collins",
+    "category": "Career Success",
+    "image": "goodtogreat.webp"
+  },
+  {
+    "title": "Start with Why",
+    "author": "Simon Sinek",
+    "category": "Career Success",
+    "image": "start-with-why.webp"
+  },
+  {
+    "title": "Dare to Lead",
+    "author": "Brené Brown",
+    "category": "Career Success",
+    "image": "dare-to-lead.webp"
+  },
+  {
+    "title": "The 5 AM Club",
+    "author": "Robin Sharma",
+    "category": "Career Success",
+    "image": "five-am-club.webp"
+  },
+
+  {
+    "title": "Big Magic",
+    "author": "Elizabeth Gilbert",
+    "category": "Creativity",
+    "image": "big-magic.webp"
+  },
+  {
+    "title": "Steal Like an Artist",
+    "author": "Austin Kleon",
+    "category": "Creativity",
+    "image": "artist.webp"
+  },
+  {
+    "title": "Show Your Work!",
+    "author": "Austin Kleon",
+    "category": "Creativity",
+    "image": "show-your-work.webp"
+  },
+  {
+    "title": "The Creative Act: A Way of Being",
+    "author": "Rick Rubin",
+    "category": "Creativity",
+    "image": "creative-act.webp"
+  },
+  {
+    "title": "Creativity, Inc.",
+    "author": "Ed Catmull",
+    "category": "Creativity",
+    "image": "creativity.webp"
+  }
+]

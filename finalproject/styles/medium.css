@@ -1,0 +1,50 @@
+/********tablets*********/
+@media (min-width: 641px) and (max-width: 1024px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        flex-basis: 100%;
+    }
+
+    #title {
+        font-size: clamp(1.3rem, 4vw, 2rem);
+    }
+
+    main {
+        width: min(100% - 2rem, 1100px);
+    }
+
+    .about-us {
+        padding: 1.5rem;
+    }
+
+    .about-us h2 {
+        font-size: 1.5rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .company-contact,
+    .author {
+        width: 100%;
+        text-align: center;
+    }
+}

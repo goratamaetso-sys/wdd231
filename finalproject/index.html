@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Read and Rise</title>
+    <meta name="author" content="Gorata Maetso">
+    <meta name="description" content="This is a homepage page for Read and Rise, a reading community that encourages growth through reading and continous learning.">
+    <meta property="og:title" content="HomePage | Read and Rise">
+    <meta property="og:description" content="This is a homepage page for Read and Rise, a reading community that encourages growth through reading and continous learning.">
+    <meta property="og:image" content="https://goratamaetso-sys.github.io/wdd231/finalproject/images/rnr-hero-large.webp">
+    <meta property="og:url" content="https://goratamaetso-sys.github.io/wdd231/">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/readnrise.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/universal.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <img src="images/rnr-logo.webp" alt="Site Logo" width="44" height="44">
+        <span id="title">Read and Rise</span>
+        <button id="hamburger" class="hamburger"> ☰</button>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html"  class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>   
+	        </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+             <picture>
+                <source media="(min-width: 1000px)" srcset="images/rnr-hero-large.webp">
+                <source media="(min-width: 750px)" srcset="images/rnr-hero-medium.webp">
+                <img src="images/rnr-hero-small.webp" alt="Read and Rise hero image" width="500" height="250">
+            </picture>
+            <div class="cta">
+                <a href="join.html" class="btn">Start Your Journey</a>
+            </div>
+        </div>
+        <h1>Read & Rise</h1>
+        <p class="tagline">Discover books. Build habits. Transform your life.</p>
+        <section id="about-us" class="about-us">
+            <h2>Get to know us</h2>
+            <p>We are a community of book lovers dedicated to helping you grow through reading.</p>
+            <p>Our mission is to inspire a love of reading and provide resources for personal development.</p>
+        </section>    
+        <section class="discover">
+            <h2>Discover Reading Paths</h2>
+
+            <div class="discover-grid">
+
+                <div class="card">
+                    <h3>🌟 Personal Growth</h3>
+                    <p>Develop confidence, discipline, and purpose through transformative books.</p>
+                </div>
+                <div class="card">
+                    <h3>💼 Career Success</h3>
+                    <p>Enhance leadership, communication, and productivity skills.</p>
+                </div>
+                <div class="card">
+                    <h3>🧠 Knowledge</h3>
+                    <p>Explore science, history, culture, and fascinating ideas.</p>
+                </div>
+                <div class="card">
+                    <h3>🎨 Creativity</h3>
+                    <p>Unlock imagination and innovative thinking.</p>
+                </div>
+            </div>
+        </section>
+        
+        
+    </main> 
+    <footer>
+        <div class="company-contact">
+            <p>0978 Corner Street, Meadowlands, Soweto</p>
+            <p>Phone: (090) 912-1313</p>
+            <p>Email: info@readandrise.com</p>
+        </div>
+        <div class="social">
+            <a href="https://linkedin.com/in/goratamaetso" target="_blank"><img src="images/linkedin-icon.svg" alt="Linkedin icon" width="16" height="16"></a>
+            <a href="https://github.com/goratamaetso-sys" target="_blank"><img src="images/github.svg" alt="Github icon" width="16" height="16"></a>
+            <a href="https://instagram.com/dr_rata_rams" target="_blank"><img src="images/instagram-icon.svg" alt="Instagram icon" width="16" height="16"></a>
+        </div> 
+        <div class="author">
+            <p>WDD 231 - Final Project</p>
+            <p>&copy;<span id="currentyear"></span> Gorata Maetso| South Africa</p>   
+            <p id="lastModified"></p>
+        </div>
+          
+    </footer>    
+    
+</body>
+</html>   
